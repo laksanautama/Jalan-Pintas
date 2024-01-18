@@ -31,3 +31,9 @@ int main() {
         // Output jalur
         cout << i + 1 << ". " << start << "," << end << endl;
     }
+    // Mencari koneksi penting
+    cout << "Jalur penting: ";
+    for (auto it = TemukanKoneksiPenting.begin(); it != TemukanKoneksiPenting.end(); ++it){
+        char node = it->first;
+        set<char> neighbors = it->second;
+    }
