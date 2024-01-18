@@ -8,24 +8,17 @@ using namespace std;
 //----kode di atas batas ini tidak boleh diganti atau ditambah----
 
 map<string, string> path;
+int main() {
+    int n = 5;
+    map<char, set<char>>TemukanKoneksiPenting;
 
-void temukanKoneksiPenting(int n, const set<pair<char, char>>& jalur) {
-    map<char, set<char>> graf;
-//membuat graf dari jalur yang diberikan
-    for(const auto& p : jalur){
-    graf[p.first].insert(p.second);
-    graf[p.second].insert(p.first);
-}
-// Menghitung derajat setiap node
-    map<char, int> derajat;
-    for (const auto& pair : graf) {
-        derajat[pair.first] = pair.second.size();
-}
+    char nodes[] = {'A', 'B', 'C', 'D', 'E'};
+    for (int i = 0; i < n; ++i) {
+        TemukanKoneksiPenting[nodes[i]] = set<char>();
+    }
 
+    // Input jalur
+    cout << "Jumlah n = " << n << endl;
+    cout << "Output nya adalah" << endl;
 
-}
-
-int main(){
-
-return 0;
-}
+    char paths[][2] = {{'A', 'B'}, {'B', 'A'}, {'B', 'C'}, {'C', 'B'}, {'D', 'E'}};
