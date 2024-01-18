@@ -8,14 +8,17 @@ using namespace std;
 //----kode di atas batas ini tidak boleh diganti atau ditambah----
 
 map<string, string> path;
+int main() {
+    int n = 5;
+    map<char, set<char>>TemukanKoneksiPenting;
 
-void jalur_penting(map<string, string> path){
+    char nodes[] = {'A', 'B', 'C', 'D', 'E'};
+    for (int i = 0; i < n; ++i) {
+        TemukanKoneksiPenting[nodes[i]] = set<char>();
+    }
 
-//CODE
+    // Input jalur
+    cout << "Jumlah n = " << n << endl;
+    cout << "Output nya adalah" << endl;
 
-}
-
-int main(){
-
-return 0;
-}
+    char paths[][2] = {{'A', 'B'}, {'B', 'A'}, {'B', 'C'}, {'C', 'B'}, {'D', 'E'}};
