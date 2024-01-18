@@ -9,9 +9,19 @@ using namespace std;
 
 map<string, string> path;
 
-void jalur_penting(map<string, string> path){
+void temukanKoneksiPenting(int n, const set<pair<char, char>>& jalur) {
+    map<char, set<char>> graf;
+//membuat graf dari jalur yang diberikan
+    for(const auto& p : jalur){
+    graf[p.first].insert(p.second);
+    graf[p.second].insert(p.first);
+}
+// Menghitung derajat setiap node
+    map<char, int> derajat;
+    for (const auto& pair : graf) {
+        derajat[pair.first] = pair.second.size();
+}
 
-//CODE
 
 }
 
