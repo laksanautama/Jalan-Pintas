@@ -22,3 +22,12 @@ int main() {
     cout << "Output nya adalah" << endl;
 
     char paths[][2] = {{'A', 'B'}, {'B', 'A'}, {'B', 'C'}, {'C', 'B'}, {'D', 'E'}};
+
+    for (int i = 0; i < sizeof(paths) / sizeof(paths[0]); ++i) {
+        char start = paths[i][0];
+        char end = paths[i][1];
+        TemukanKoneksiPenting[start].insert(end);
+
+        // Output jalur
+        cout << i + 1 << ". " << start << "," << end << endl;
+    }
