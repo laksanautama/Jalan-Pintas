@@ -36,4 +36,20 @@ int main() {
     for (auto it = TemukanKoneksiPenting.begin(); it != TemukanKoneksiPenting.end(); ++it){
         char node = it->first;
         set<char> neighbors = it->second;
+
+        // Memeriksa koneksi penting
+        if (neighbors.size() > 1) {
+            cout << "[";
+            cout << node;
+            for (char neighbor : neighbors) {
+                cout << ", " << neighbor;
+            }
+            cout << "] ";
+        }
     }
+    cout << "adalah koneksi penting" << endl;
+
+return 0;
+}
+
+
